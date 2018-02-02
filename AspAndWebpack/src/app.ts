@@ -1,31 +1,17 @@
 ﻿import angular from 'angular';
-debugger;
+import {User} from './user';
+//import * as User from './user';
 var app = angular.module('app', []);
 
 app.controller('mainCtrl', ($scope: any) => {
-    debugger;
-    console.log('inside app controller');
-    console.log($scope.filterOptions);
-    $scope.user3 = {
-        name: 'Emily',
-        address: 'Prairie Village',
-        state: 'KS'
-    }
+    let colin = new User("Colin!!!");
 
-    $scope.user = {
-        name: 'Colin',
-        address: 'Prairie Village',
-        state: 'Kansas'
-    }
+    colin.name = 'Colin!';
+    colin.address = 'USA';
+    let message = colin.sayHello();
 
-    $scope.user2 = {
-        name: 'Luke Skywalker',
-        address: 'Outer Space',
-        state: 'Secret Rebel Base'
-    }
+    $scope.user = colin;
+    $scope.message = message;
 
-    $scope.filterOptions = {
-        names: ["Option1", "Option2", "Options3"]
-    }
 
 });
