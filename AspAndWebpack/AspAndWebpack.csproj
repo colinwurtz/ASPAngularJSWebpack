@@ -144,12 +144,18 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AngularModelHelper.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="ExpressionExtractor.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="HtmlHelpers.cs" />
+    <Compile Include="JsonExtensions.cs" />
+    <Compile Include="Models\GroceryModel.cs" />
+    <Compile Include="Models\RecipeModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -158,6 +164,7 @@
     <Content Include="webpack.common.js" />
     <Content Include="webpack.dev.js" />
     <Content Include="webpack.prod.js" />
+    <Content Include="src\Models.tst" />
     <None Include="src\index.less" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -180,13 +187,20 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="package.json" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <TypeScriptCompile Include="src\GroceryModel.ts">
+      <DependentUpon>Models.tst</DependentUpon>
+      <CustomToolNamespace>Models\GroceryModel.cs</CustomToolNamespace>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="src\RecipeModel.ts">
+      <DependentUpon>Models.tst</DependentUpon>
+      <CustomToolNamespace>Models\RecipeModel.cs</CustomToolNamespace>
+    </TypeScriptCompile>
     <TypeScriptCompile Include="src\app.ts" />
     <TypeScriptCompile Include="src\index.ts" />
     <TypeScriptCompile Include="src\user.ts" />

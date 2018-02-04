@@ -1,6 +1,6 @@
 ﻿{
   "compilerOptions": {
-    "strict": true, // Includes: alwaysStrict, noImplicitAny, noImplicitThis, strictNullChecks
+    "strict": false, // Includes: alwaysStrict, noImplicitAny, noImplicitThis, strictNullChecks
     "forceConsistentCasingInFileNames": true,
     "noFallthroughCasesInSwitch": true,
     "noImplicitReturns": true,
