@@ -4,14 +4,14 @@
     "forceConsistentCasingInFileNames": true,
     "noFallthroughCasesInSwitch": true,
     "noImplicitReturns": true,
-    "noUnusedLocals": true,
+    "noUnusedLocals": false,
     "noUnusedParameters": true,
     "allowSyntheticDefaultImports": true,
     "noEmitOnError": true,
     "sourceMap": true,
     "removeComments": true,
     "skipLibCheck": true,
-    "target": "es5",
+    "target": "es6",
     "module": "esnext", // Could be es6 but its in case we use Dynamic import()
     "moduleResolution": "Node",
     "typeRoots": [

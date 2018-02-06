@@ -7,7 +7,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title - My ASP.NET Application</title>
-
+   
     
 </head>
 <body>
@@ -43,5 +43,6 @@
     here outside and after body. This is because webpack injects script/link tags at the end of the body, so this section
     needs to be here for the ordering to be right.
 *@
+
 @RenderSection("scripts", required: false)
 </html>

@@ -35,11 +35,10 @@
             </li>
         </ul>
     </div>
+
     
     <div class="col-md-4">
-        <h2>Web Hosting</h2>
-        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
+        <input type="text" ng-model="selected" uib-typeahead="state for state in states | filter:$viewValue | limitTo:8" class="form-control">
+        <a href="#" editable-text="user1.name">{{ user1.name || 'empty' }}</a>
     </div>
-    <pre>{{grocList|json}}</pre>
 </div>
