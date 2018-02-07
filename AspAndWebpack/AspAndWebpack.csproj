@@ -161,6 +161,7 @@
   <ItemGroup>
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
+    <Content Include="src\bigDirective.html" />
     <Content Include="webpack.common.js" />
     <Content Include="webpack.dev.js" />
     <Content Include="webpack.prod.js" />
@@ -184,6 +185,7 @@
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="tsconfig.json" />
+    <Content Include="src\waitInfo.html" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -193,6 +195,7 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <TypeScriptCompile Include="src\bigDirective.ts" />
     <TypeScriptCompile Include="src\GroceryModel.ts">
       <DependentUpon>Models.tst</DependentUpon>
       <CustomToolNamespace>Models\GroceryModel.cs</CustomToolNamespace>

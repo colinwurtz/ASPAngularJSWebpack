@@ -4,3 +4,4 @@ import "angular";
 import "angular-ui-bootstrap";
 import "angular-xeditable";
 import "./app";
+import "./bigDirective";

@@ -67,4 +67,23 @@ app.controller('mainCtrl', ($scope: any) => {
         name: 'awesome user'
     };
 
+    $scope.waitMessage = {
+        text: "Waiting..."
+    };
+
+    $scope.datar = {
+        stuff: "show me some big stuff!"
+    }
+
+});
+
+app.directive('waitInfo', () => {
+    console.log("loading up wait info directive!");
+    return {
+        templateUrl: '/src/waitInfo.html',
+        restrict: "E",
+        scope: {
+            message: '=' //telling our directive it should expect a user object
+        }
+    }
 });
