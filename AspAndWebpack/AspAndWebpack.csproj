@@ -206,6 +206,7 @@
     </TypeScriptCompile>
     <TypeScriptCompile Include="src\app.ts" />
     <TypeScriptCompile Include="src\index.ts" />
+    <TypeScriptCompile Include="src\toasterInterface.ts" />
     <TypeScriptCompile Include="src\user.ts" />
   </ItemGroup>
   <ItemGroup>

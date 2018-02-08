@@ -9,12 +9,14 @@
 //import * as toaster from "angularjs-toaster";
 //import "angular-ui-bootstrap/dist/ui-bootstrap-tpls.js";
 //import accordion from "angular-ui-bootstrap/src/accordion";
+//import toaster from "angularjs-toaster";
 
-
-import {User} from './user';
+import { User } from './user';
+//import {toaster} from "angularjs-toaster";
 //import * as User from './user';
-import {GroceryModel} from './GroceryModel';
-let app = angular.module('app', ['ui.bootstrap', 'xeditable']); //'ngAnimate', 'ngTouch', 'xeditable', 'ngSanitize', 'ui.select', 'ui.sortable', 'toaster'
+import { GroceryModel } from './GroceryModel';
+//import { ToasterInter} from "./toasterInterface";
+let app = angular.module('app', ['ui.bootstrap', 'xeditable','toaster']); //'ngAnimate', 'ngTouch', 'xeditable', 'ngSanitize', 'ui.select', 'ui.sortable', 'toaster'
 
 app.run(['editableOptions', editableOptions => {
     editableOptions.theme = 'bs3';
@@ -23,7 +25,7 @@ app.run(['editableOptions', editableOptions => {
 }]);
 
 
-app.controller('mainCtrl', ($scope: any) => {
+app.controller('mainCtrl', ($scope: any, toaster:any) => {
     let colin:User = new User("Colin!!!");
     let groceryList: Array<GroceryModel> = [];
 
@@ -75,6 +77,10 @@ app.controller('mainCtrl', ($scope: any) => {
         stuff: "show me some big stuff!"
     }
 
+    $scope.pop = () => {
+        debugger;
+        toaster.pop('info', "title", "text"); //works
+    };
 });
 
 app.directive('waitInfo', () => {
